@@ -12,6 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
+
 async def get_current_user(
     request: Request, session: AsyncSession = Depends(get_session)
 ) -> Users:

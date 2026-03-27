@@ -1,3 +1,4 @@
+"it`s bad solution to store all models in one file, strongly recommend u to spilt all models into different files"
 from datetime import datetime, timezone
 
 from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
@@ -59,6 +60,7 @@ class Medias(Base):
 
 
 class Likes(Base):
+    "in feature look at mapped column it`s a new standard of sqlalchemy"
     """Класс - модель описывающий таблицу лайков с двумя внешними ключами к users и tweets"""
 
     __tablename__ = "likes"

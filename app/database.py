@@ -1,7 +1,7 @@
 import logging
 
 import sqlalchemy
-from sqlalchemy.ext.asyncio import (  # Импортируем асинхронный движок и сессию
+from sqlalchemy.ext.asyncio import (  # Импортируем асинхронный движок и сессию I think it`s possible to understand without explain in comments
     AsyncSession,
     create_async_engine,
 )
@@ -12,6 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 logging.getLogger("sqlalchemy.engine").setLevel(logging.DEBUG)
 
 DATABASE_URL = "postgresql+asyncpg://admin:admin@db:5432/admin"
+# It`s not secure to store db url in code
 
 # Создаём асинхронный движок SQLAlchemy
 engine = create_async_engine(

@@ -32,6 +32,9 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
+# it`s to many problems to expalain in 1 comment, read about clean arch and just var. of archs and why creating mix of routes in main file is bad
+# read about dry solid and type hint
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """механизм жизненного цикла приложения"""
